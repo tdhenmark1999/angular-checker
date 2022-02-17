@@ -1,0 +1,93 @@
+<div class="list row" style="max-width: 75%;">
+  <div class="col-md-12 mt-4">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control roboto-400"
+        placeholder="SEARCH"
+        [(ngModel)]="title"
+      /> 
+      
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary oswald-400 text-decoration" style="margin-left: 10px;"
+          type="button"
+          (click)="searchPostId()"
+        >
+          SEARCH
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    
+    <app-checker-details
+      [viewMode]="true"
+      [currentChecker]="currentChecker"
+    ></app-checker-details>
+  </div>
+  <div class="col-md-12">
+    <h4 class="oswald-700 mb-3 mt-3 text-uppercase">Pawn History</h4>
+    <div class="table-responsive">
+    <table class="table mt-3" style="border-radius: 10px;">
+      <thead class="thead-bg">
+        <th class="oswald-400 text-uppercase th-modify">Loan Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Principal Amount</th>
+        <th class="oswald-400 text-uppercase th-modify">Advance Interest</th>
+        <th class="oswald-400 text-uppercase th-modify">Net Amount</th>
+        <th class="oswald-400 text-uppercase th-modify">Maturity Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Month 1 Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Month 2 Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Expiry Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Redeemed Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Promo Reason</th>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let checker of checkers | filter: searchText; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveChecker(checker, i)">
+          <th class="roboto-700">{{ checker.id }}</th>
+          <th class="roboto-400"> {{ checker.title == null ? checker.name : checker.title}}</th>
+          <th class="roboto-400">{{ checker.userId  == null ? checker.postId : checker.userId}}</th>
+        </tr> -->
+        <tr>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+          <td class="roboto-300 td-modify">00000</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="table-responsive">
+      <table class="table mt-3" style="border-radius: 10px;">
+        <thead class="thead-bg">
+          <th class="oswald-400 text-uppercase th-modify">Storage Code</th>
+          <th class="oswald-400 text-uppercase th-modify">Description</th>
+          <th class="oswald-400 text-uppercase th-modify">Weight</th>
+          <th class="oswald-400 text-uppercase th-modify">Karat</th>
+          <th class="oswald-400 text-uppercase th-modify">Item Appraisal Value</th>
+
+        </thead>
+        <tbody>
+       
+          <tr>
+            <td class="roboto-300 td-modify">00000</td>
+            <td class="roboto-300 td-modify">00000</td>
+            <td class="roboto-300 td-modify">00000</td>
+            <td class="roboto-300 td-modify">00000</td>
+            <td class="roboto-300 td-modify">00000</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      </div>
+  </div>
+  
+</div>
